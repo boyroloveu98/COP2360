@@ -1,8 +1,0 @@
-C:\Users\Mattc\Desktop\School\COP2360\Language Translator\Language Translator\bin\Debug\Language Translator.exe.config
-C:\Users\Mattc\Desktop\School\COP2360\Language Translator\Language Translator\bin\Debug\Language Translator.exe
-C:\Users\Mattc\Desktop\School\COP2360\Language Translator\Language Translator\bin\Debug\Language Translator.pdb
-C:\Users\Mattc\Desktop\School\COP2360\Language Translator\Language Translator\obj\Debug\Language_Translator.Form1.resources
-C:\Users\Mattc\Desktop\School\COP2360\Language Translator\Language Translator\obj\Debug\Language_Translator.Properties.Resources.resources
-C:\Users\Mattc\Desktop\School\COP2360\Language Translator\Language Translator\obj\Debug\Language Translator.csproj.GenerateResource.Cache
-C:\Users\Mattc\Desktop\School\COP2360\Language Translator\Language Translator\obj\Debug\Language Translator.exe
-C:\Users\Mattc\Desktop\School\COP2360\Language Translator\Language Translator\obj\Debug\Language Translator.pdb
