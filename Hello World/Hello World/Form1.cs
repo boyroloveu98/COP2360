@@ -22,10 +22,9 @@ namespace Hello_World
             MessageBox.Show("Hello,World!");
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void outputLabel_Click(object sender, EventArgs e)
         {
 
         }
-
     }
 }

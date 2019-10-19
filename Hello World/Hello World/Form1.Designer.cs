@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.myButton = new System.Windows.Forms.Button();
+            this.outputLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // myButton
@@ -42,20 +43,32 @@
             this.myButton.UseVisualStyleBackColor = false;
             this.myButton.Click += new System.EventHandler(this.myButton_Click);
             // 
+            // outputLabel
+            // 
+            this.outputLabel.AutoSize = true;
+            this.outputLabel.Location = new System.Drawing.Point(56, 69);
+            this.outputLabel.Name = "outputLabel";
+            this.outputLabel.Size = new System.Drawing.Size(147, 17);
+            this.outputLabel.TabIndex = 1;
+            this.outputLabel.Text = "Thank you very much!";
+            this.outputLabel.Click += new System.EventHandler(this.outputLabel_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(282, 253);
+            this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.myButton);
             this.Name = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        //private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button myButton;
+        private System.Windows.Forms.Label outputLabel;
     }
 }
 
