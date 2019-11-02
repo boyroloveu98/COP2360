@@ -1,0 +1,76 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace Ending_Balance
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            // constant for the monthly interest rate.
+            const decimal INTEREST_RATE = 0.005m;
+
+            //local variables
+            decimal balance; //account balance
+            int months; // the number of the months
+            int count = 1; //loop counter, starting with month 1
+
+            //retrieve starting balance from user input
+            if (decimal.TryParse(startingBalTextBox.Text, out balance))
+            {
+                if (int.TryParse(monthsTextBox.Text, out months))
+                {
+                    //since both  fields were validated, begin the loop
+                    while (count <= months)
+                    {
+                        //add the current month's interest to the balance
+                        balance = balance+(INTEREST_RATE * balance);
+
+                        //increment the month count for the loop
+                        count += 1;
+
+                    }
+                    endingBalanceLabel.Text = balance.ToString("c");
+                }
+                else
+                {
+                    // invalid value for the months 
+                    MessageBox.Show("invalid value for months");
+                    monthsTextBox.Text = "";
+                    monthsTextBox.Focus();
+                }
+            }
+            else
+            {
+                // invalid for the starting balance
+                MessageBox.Show("Invalid value for the starting balance");
+                startingBalTextBox.Text = "";
+                startingBalTextBox.Focus();
+            }
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            startingBalTextBox.Text = "";
+            monthsTextBox.Text = "";
+            endingBalanceLabel.Text = "";
+            startingBalTextBox.Focus();
+        }
+    }
+}

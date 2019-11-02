@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 
-namespace Load_Event
+namespace South_America
 {
     public partial class Form1 : Form
     {
@@ -19,38 +19,38 @@ namespace Load_Event
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            //my favorite button 
             this.Close();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void getCountriesButton_Click(object sender, EventArgs e)
         {
             try
             {
-                //Declare a variable to hold a country name
+                //Declare a variable to hold acountry name
                 string countryName;
-
-                //Declare a StreamReader Variable
+                //Declare a StreamReader variable
                 StreamReader inputFile;
 
-                //Open the file and get a streamreader object
+                //open the file and get  a streamreader object
                 inputFile = File.OpenText("Countries.txt");
 
-                //read the contents of the file
-                while (!inputFile.EndOfStream)
+                //clear out the lsitbox
+                countriesListBox.Items.Clear();
+
+                //read the files contents
+                while(!inputFile.EndOfStream)
                 {
                     //get a country name
                     countryName = inputFile.ReadLine();
 
-                    //add the country to the Listbox
+                    //add the country name to the Listbox
                     countriesListBox.Items.Add(countryName);
                 }
-                //close the file
+
                 inputFile.Close();
             }
             catch (Exception ex)
             {
-                //show the error
                 MessageBox.Show(ex.Message);
             }
         }
