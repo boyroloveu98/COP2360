@@ -49,7 +49,7 @@
             this.countriesListBox.FormattingEnabled = true;
             this.countriesListBox.ItemHeight = 16;
             this.countriesListBox.Location = new System.Drawing.Point(57, 49);
-            this.countriesListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.countriesListBox.Margin = new System.Windows.Forms.Padding(4);
             this.countriesListBox.Name = "countriesListBox";
             this.countriesListBox.Size = new System.Drawing.Size(227, 116);
             this.countriesListBox.TabIndex = 4;
@@ -57,7 +57,7 @@
             // exitButton
             // 
             this.exitButton.Location = new System.Drawing.Point(120, 186);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(100, 28);
             this.exitButton.TabIndex = 6;
@@ -73,9 +73,10 @@
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.outputDescriptionLabel);
             this.Controls.Add(this.countriesListBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "South America";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

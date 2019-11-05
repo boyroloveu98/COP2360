@@ -54,5 +54,10 @@ namespace Load_Event
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("prepare to see the stuff");
+        }
     }
 }
